@@ -42,7 +42,24 @@ void id(int z, int x){
         printf("0\n");
     }
 }
-void pomidor()
+void odcinek(a1,a2,a3,b1,b2,b3){
+    printf("podaj pierwszy odcinek a1,b1\n");
+    scanf("%d\n", a1);
+    scanf("%d\n", b1);
+    printf("podaj drugi odcinek a2,b2\n");
+    scanf("%d\n", a2);
+    scanf("%d\n", b2);
+    if(a1<=a2 && b1<=b2){
+        a3=b1-a2;
+        printf("%d", a3);
+    }else{ return -1;
+    }
+    if(a2<=a1 && b1<=b2){
+        a3=b1-a1;
+        printf("%d", a3);
+    }else{ return -1;
+     }
+}
 
 
 int main()
@@ -82,12 +99,12 @@ int main()
     printf("%c\n",s[i]);
     printf("Podaj slowo\n");
     scanf("%s",palindrom);
-    if(palindrom[0]==palindrom[4] && palindrom[1]==palindrom[3]){
+    if(palindrom[0]==palindrom[4] && palindrom[1]==palindrom[3]){ //sprobowac zrobic to na strlen
         printf("podane slowo jest palindromem");
     }else{
         printf("podane slowo nie jest pomidorem czy jakos tak...");
     }
-    
+    odcinek(a1,a2,a3,b1,b2,b3);
 
 
     return 0;
